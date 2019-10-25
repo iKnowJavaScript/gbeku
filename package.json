@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node bin/www",
     "postinstall": "npx tsc",
-    "test": "jest --coverage --verbose",
-    "dev": "tsc-watch --onSuccess \"node ./dist/app.js\""
+    "test": "jest --watchAll",
+    "dev": "tsc-watch --onSuccess \"nodemon ./dist/app.js\""
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -20,8 +20,12 @@
     "helmet": "^3.21.2",
     "http-errors": "^1.7.3",
     "http-status": "^1.4.0",
+    "jest": "^24.9.0",
     "method-override": "^3.0.0",
     "morgan": "^1.9.1",
+    "supertest": "^4.0.2",
+    "swagger-ui-express": "^4.1.2",
+    "ts-jest": "^24.1.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
@@ -30,23 +34,13 @@
     "@types/express": "^4.17.1",
     "@types/helmet": "0.0.44",
     "@types/http-status": "^0.2.30",
+    "@types/jest": "^24.0.19",
     "@types/method-override": "0.0.31",
-    "@types/morgan": "^1.7.37"
-  },
-  "jest": {
-    "verbose": true,
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+    "@types/morgan": "^1.7.37",
+    "@types/supertest": "^2.0.8",
+    "ts-node": "^8.4.1",
+    "tsc-watch": "^4.0.0",
+    "typescript": "^3.6.4"
   },
   "keywords": [],
   "author": "",
