@@ -1,0 +1,47 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "schemes": ["http"],
+  "produces": ["application/json"],
+  "paths": {
+    "/health-check": {
+      "get": {
+        "tags": ["Health Check"],
+        "summary": "Check the status of the service",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        },
+        "content": {
+          "application/json": {}
+        },
+        "parameters": []
+      }
+    },
+    "/error-test": {
+      "get": {
+        "tags": ["Error Payload Test"],
+        "summary": "Tests the error payload",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        },
+        "content": {
+          "application/json": {}
+        }
+      }
+    }
+  }
+}
