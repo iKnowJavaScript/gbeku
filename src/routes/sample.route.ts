@@ -1,4 +1,4 @@
-import sampleController from "../controllers/sample";
+import sampleController from "../controllers/sample.controller";
 
 import { Router, Request, Response } from "express";
 const router = Router();
